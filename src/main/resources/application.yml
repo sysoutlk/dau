@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: dau-tracker
+
+    #Redis配置
+  redis:
+    host: localhost
+    port: 6379
+    database: 0
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1ms
+
+#日志配置
+logging:
+  level:
+    com.example.dautracker: debug
+    org.springframework.data.redis: debug
